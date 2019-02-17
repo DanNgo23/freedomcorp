@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>FreedomCorp Dashboard</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand"><img id="logo" src="img/logo.png"></a>
+            <!-- Trigger/Open The Modal -->
+            <a id="get-started" class="btn"><strong>Get Started Here</strong></a>
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h4><strong>Getting Started</strong></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            I created an application that builds <b>a data dashboard for the sales teams of FreedomCorp</b>.
+                            FreedomCorp specializes in <b>selling</b> all kinds of <b>wholesale goods</b> to companies across the nation.
+                        </p>
+                        <p>
+                            They sell raw materials like planks of wood and bags of cement to construction companies, TVs and computers to electronic stores,
+                            refrigerators and washing machines to household appliance stores, and a range of furniture to different outlets.
+                        </p>
+                        <p>
+                            The data dashboard <b>allows company decision-makers</b> to <b>find</b> out <b>which parts</b> of their business are <b>doing better</b> than others.
+                            Their <b>sales team</b> is split between <b/>four different regions</b> of the U.S. <b>and</b> for each region,
+                            <b>the company</b> wants to be <b>able to evaluate regions</b> and compare regional statistics.
+                        </p>
+                        <p>
+                            All companies FreedomCorp conducts business with is categorized as a small, medium, or large company.
+                            Sales teams' <b>performances are tracked</b> over an entire year <b>based on</b> different metrics
+                            (<b>call duration</b>, <b>sales generated</b>, <b>units sold</b>).
+                        </p>
+                        <p>
+                            To explore, click <b>INSTRUCTIONS</b> to officially begin.
+                        </p>
+                      
+                    </div>
+                  <!--
+                  <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                  </div> -->
+                </div>
+            </div>
+            
+            <a id="instructions" class="btn"><strong>Instructions</strong></a>
+            <!-- The 2nd Modal -->
+            <div id="myModal2" class="modal">
+            
+              <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h4><strong>Instructions</strong></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <b>Click</b> and <b>drag</b> anywhere in the <b>grey timeline</b> (bottom of the page) to only include dates within a specific time period.
+                        </p>
+                        <p>
+                            <b>Choose</b> a <b>metric</b> from the <b>dropdown</b> list (left of the page) as the method of evaluation.
+                        </p>
+                        <p>
+                            After choosing a time period and a metric, the stacked area chart, donut chart, and 3 bar charts will all adjust accordingly. Enjoy!
+                        </p>
+                    </div>
+                  <!--
+                  <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                  </div> -->
+                </div>
+            </div>
+                 
+            <span class="my-info">
+                <b class="red">by Dan Tran-Ngo</b> | <small>danngo23 at gmail (dot) com</small> | <a href="https://www.linkedin.com/in/dan-tran-ngo/" target="_blank"><small>My LinkedIn</small></a>
+            </span>
+        </div>
+    </nav>
+
+    <h1 class="title">FreedomCorp Data Dashboard</h1>
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div id="left-charts" class="col-sm-12 col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Dates: <span id="dateLabel1">01/10/2018</span> - <span id="dateLabel2">12/19/2018</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <select id="var-select" class="form-control">
+                            <option selected value="call_revenue">Revenue (USD)</option>
+                            <option value="call_duration">Call Time (seconds)</option>
+                            <option value="units_sold">Units Sold</option>
+                        </select>
+                    </div>                          
+                </div>
+                <div id="stacked-area"></div>
+                <div id="timeline"></div>
+            </div>
+            <div id="right-charts" class="col-md-4 col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12" id="company-size"></div>
+                    <div class="col-sm-6 col-md-12" id="units-sold"></div>                    
+                    <div class="col-sm-6 col-md-12" id="revenue"></div>
+                    <div class="col-sm-6 col-md-12" id="call-duration"></div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- External JS Libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/d3.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/stackedAreaChart.js"></script>
+<script src="js/barChart.js"></script>
+<script src="js/donutChart.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
